@@ -1,0 +1,24 @@
+{
+  "schema_version":"1.0",
+  "session_id":"AGORA-ELYSION-001",
+  "status":"UNDER_TEST",
+  "decision":"HOLD_ARCHITECTURE_ONLY",
+  "participants":[
+    {"participant_id":"ASTRA-A","function":"MODEL_ARCHITECT","execution":"REAL_PLANNING","model_id":null,"farm_id":null},
+    {"participant_id":"ASTRA-B","function":"TRAINING_ENGINEER","execution":"REAL_PLANNING","model_id":null,"farm_id":null},
+    {"participant_id":"ASTRA-C","function":"MEMORY_RAG_ENGINEER","execution":"REAL_PLANNING","model_id":null,"farm_id":null},
+    {"participant_id":"ASTRA-D","function":"BENCHMARK_ENGINEER","execution":"REAL_PLANNING","model_id":null,"farm_id":null},
+    {"participant_id":"ASTRA-E","function":"RED_TEAM","execution":"REAL_PLANNING","model_id":null,"farm_id":null},
+    {"participant_id":"ASTRA-F","function":"SYNTHESIS_RELEASE","execution":"REAL_PLANNING","model_id":null,"farm_id":null}
+  ],
+  "cerebron_roles_consulted":["CEREBRON","SAPHEA","SPIRALION","ETHERION","HYPERION","ASTRION","METRION","AFAH","AELYS","ELYRA","SAPHEA_MICRO"],
+  "cerebron_role_workers_executed":[],
+  "hf_agents_executed":[],
+  "farms_executed":[],
+  "models_executed":[],
+  "tools_executed":["repository_audit","configuration_audit"],
+  "training_executed":false,
+  "weights_changed":false,
+  "notes":["Role names are not independent neural models without bindings.","Same underlying model is not independent evidence.","The legacy F145 repository name does not modify the 144-farm registry."]
+}
+
