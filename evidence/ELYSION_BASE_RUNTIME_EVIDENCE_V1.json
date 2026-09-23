@@ -1,0 +1,31 @@
+{
+  "schema": "ELYSION_BASE_RUNTIME_EVIDENCE_V1",
+  "status": "PASS",
+  "run_id": 35917498487,
+  "workflow": "ELYSION Base Runtime Canary",
+  "head_sha": "844de3824c42a96bc9879aaf6c188122031909e6",
+  "qwen3_4b": {
+    "model_id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "device": "cpu",
+    "dtype": "bfloat16",
+    "latency_s": 46.46,
+    "max_rss_kb": 8875156,
+    "result_sha256": "393ad4d00d9910ab397728080a9b977469d618bb1d1ef10fef9346aa2499d72c",
+    "artifact_id": 10776116066,
+    "artifact_digest": "sha256:655155d1b068e63a2ae5f54b6e1f02b1803e1ac6da7731add42c87fd388e8988"
+  },
+  "smollm3_3b": {
+    "model_id": "HuggingFaceTB/SmolLM3-3B",
+    "revision": "a07cc9a04f16550a088caea529712d1d335b0ac1",
+    "device": "cpu",
+    "dtype": "bfloat16",
+    "latency_s": 106.864,
+    "max_rss_kb": 6684408,
+    "result_sha256": "1dceac4e5d0d732c7349273e0c1ecd2b9efbe8bbbed430fd7bbfe58cf513d15c",
+    "artifact_id": 10775099674,
+    "artifact_digest": "sha256:4052f42ab677635e1a0dfb9f8e8e2bae1bc5fa9b26ff12850306ca164a4aa2f4"
+  },
+  "claim_scope": "Exact-revision model loading and inference runtime verified. No claim of comparative quality.",
+  "weights_changed": false
+}
