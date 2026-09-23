@@ -1,0 +1,94 @@
+{
+  "schema": "AGORA_ELYSION_001_ASTRA_ASSIGNMENTS_V1",
+  "status": "ACTIVE_TASK_BOARD",
+  "forum": "AGORA-ELYSION-001",
+  "tasks": [
+    {
+      "id": "ASTRA-A",
+      "owner": "MODEL_ARCHITECT",
+      "deliverable": "agora/AGORA-ELYSION-001/astra/ASTRA-A-model-architecture.json",
+      "must_include": [
+        "parameter_budget",
+        "context_length",
+        "candidate_base",
+        "adapter_strategy",
+        "inference_runtime",
+        "risks"
+      ]
+    },
+    {
+      "id": "ASTRA-B",
+      "owner": "TRAINING_ENGINEER",
+      "deliverable": "agora/AGORA-ELYSION-001/astra/ASTRA-B-training-plan.json",
+      "must_include": [
+        "dataset_schema",
+        "training_method",
+        "seed",
+        "hyperparameters",
+        "resource_feasibility",
+        "rollback"
+      ]
+    },
+    {
+      "id": "ASTRA-C",
+      "owner": "MEMORY_ENGINEER",
+      "deliverable": "agora/AGORA-ELYSION-001/astra/ASTRA-C-memory-plan.json",
+      "must_include": [
+        "hf_routes",
+        "namespaces",
+        "dedup",
+        "contamination_guard",
+        "replay",
+        "retention"
+      ]
+    },
+    {
+      "id": "ASTRA-D",
+      "owner": "BENCHMARK_ENGINEER",
+      "deliverable": "agora/AGORA-ELYSION-001/astra/ASTRA-D-benchmark-plan.json",
+      "must_include": [
+        "baseline",
+        "m6",
+        "transfer",
+        "regression",
+        "latency",
+        "scoring"
+      ]
+    },
+    {
+      "id": "ASTRA-E",
+      "owner": "RED_TEAM",
+      "deliverable": "agora/AGORA-ELYSION-001/astra/ASTRA-E-redteam.json",
+      "must_include": [
+        "data_leakage",
+        "shared_lineage",
+        "overfit",
+        "false_consensus",
+        "security",
+        "failure_modes"
+      ]
+    },
+    {
+      "id": "ASTRA-F",
+      "owner": "SYNTHESIS_RELEASE",
+      "deliverable": "agora/AGORA-ELYSION-001/astra/ASTRA-F-synthesis.json",
+      "must_include": [
+        "agreements",
+        "disagreements",
+        "evidence_table",
+        "decision",
+        "open_blocks",
+        "next_action"
+      ]
+    }
+  ],
+  "execution_evidence_required": [
+    "model_id",
+    "model_revision",
+    "execution_id",
+    "result_sha256",
+    "timestamp",
+    "provenance"
+  ],
+  "non_execution_label": "NON_EXECUTED"
+}
