@@ -18,15 +18,19 @@
       "id": "G3",
       "name": "memory_live_access_and_m6_isolation",
       "status": "PARTIAL",
-      "evidence": "HF live private memory write/read/SHA PASS via master control plane; M6 isolation not yet sealed",
+      "evidence": "Live private memory PASS; M6 private seal/readback/SHA/count PASS; training-source isolation policy exists but E2E exclusion is not yet proven.",
       "subchecks": {
         "private_memory_live_access": "PASS",
         "private_memory_run_id": 35917403993,
         "private_memory_job_id": 107372423244,
         "private_memory_artifact_id": 10775791247,
         "private_memory_artifact_digest": "sha256:4836f3f60393fbd2a37c8f597e6000daf509bec43b1a3518b96561b817a9326f",
-        "m6_frozen_hashed": "BLOCKED",
-        "m6_train_retrieval_isolation": "BLOCKED"
+        "m6_frozen_hashed": "PASS",
+        "m6_train_retrieval_isolation": "POLICY_DEFINED_NOT_E2E_PROVED",
+        "m6_dataset_sha256": "bc2324c1afffe780c3deb3cc25e70f9838f86253bb4ea27f88fec0cb209b59f6",
+        "m6_run_id": 35917712253,
+        "m6_artifact_id": 10776000975,
+        "m6_artifact_digest": "sha256:39ba00c6568d8876733715ee36900f132dd615435289c88aef8cef4626251ded"
       }
     },
     {
