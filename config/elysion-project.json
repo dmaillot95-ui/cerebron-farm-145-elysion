@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "project_id": "MODEL-ELYSION-001",
+  "display_name": "ELYSION",
+  "repository": "dmaillot95-ui/cerebron-farm-145-elysion",
+  "repository_name_is_legacy": true,
+  "entity_type": "MODEL_PROJECT",
+  "farm_id": null,
+  "farm_count_effect": 0,
+  "master_farm_cap": 144,
+  "agora_session": "AGORA-ELYSION-001",
+  "decision": "HOLD_ARCHITECTURE_ONLY",
+  "training_status": "NON_EXECUTED",
+  "weights_changed": false,
+  "claims": {
+    "agi": false,
+    "asi": false,
+    "superintelligence": false,
+    "native_model_trained": false
+  },
+  "zero_paid_overage_default": true
+}
+
