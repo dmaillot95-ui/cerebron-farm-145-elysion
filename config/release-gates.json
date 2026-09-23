@@ -1,16 +1,78 @@
 {
-  "schema_version":"1.0",
-  "decision":"NO_GO_TRAINING",
-  "gates":[
-    {"id":"G1","name":"farm_governance","status":"PASS","evidence":"MODEL_PROJECT with farm_count_effect=0"},
-    {"id":"G2","name":"base_model_revision_and_license","status":"BLOCKED"},
-    {"id":"G3","name":"memory_live_access_and_m6_isolation","status":"BLOCKED"},
-    {"id":"G4","name":"gold_dataset_lineage_and_dedup","status":"BLOCKED"},
-    {"id":"G5","name":"cold_baseline_reproduced","status":"BLOCKED"},
-    {"id":"G6","name":"training_compute_available","status":"BLOCKED"},
-    {"id":"G7","name":"rollback_and_artifact_store","status":"BLOCKED"},
-    {"id":"G8","name":"red_team_approval","status":"BLOCKED"}
+  "schema_version": "1.0",
+  "decision": "NO_GO_TRAINING",
+  "gates": [
+    {
+      "id": "G1",
+      "name": "farm_governance",
+      "status": "PASS",
+      "evidence": "MODEL_PROJECT with farm_count_effect=0"
+    },
+    {
+      "id": "G2",
+      "name": "base_model_revision_and_license",
+      "status": "PASS",
+      "evidence": "config/license-runtime-verification-v1.json: exact model revisions registered and Apache-2.0 licenses verified from official Hugging Face repositories"
+    },
+    {
+      "id": "G3",
+      "name": "memory_live_access_and_m6_isolation",
+      "status": "PARTIAL",
+      "evidence": "HF live private memory write/read/SHA PASS via master control plane; M6 isolation not yet sealed",
+      "subchecks": {
+        "private_memory_live_access": "PASS",
+        "private_memory_run_id": 35917403993,
+        "private_memory_job_id": 107372423244,
+        "private_memory_artifact_id": 10775791247,
+        "private_memory_artifact_digest": "sha256:4836f3f60393fbd2a37c8f597e6000daf509bec43b1a3518b96561b817a9326f",
+        "m6_frozen_hashed": "BLOCKED",
+        "m6_train_retrieval_isolation": "BLOCKED"
+      }
+    },
+    {
+      "id": "G4",
+      "name": "gold_dataset_lineage_and_dedup",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "G5",
+      "name": "cold_baseline_reproduced",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "G6",
+      "name": "training_compute_available",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "G7",
+      "name": "rollback_and_artifact_store",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "G8",
+      "name": "red_team_approval",
+      "status": "BLOCKED"
+    }
   ],
-  "promotion_requires":["weights_changed","adapter_sha256","baseline_m6","posttrain_m6","transfer_test","regression_test","reproduction","afah_audit"]
+  "promotion_requires": [
+    "weights_changed",
+    "adapter_sha256",
+    "baseline_m6",
+    "posttrain_m6",
+    "transfer_test",
+    "regression_test",
+    "reproduction",
+    "afah_audit"
+  ],
+  "runtime_canary": {
+    "status": "IN_PROGRESS",
+    "workflow": "ELYSION Base Runtime Canary",
+    "run_id": 35917498487,
+    "models": [
+      "Qwen/Qwen3-4B",
+      "HuggingFaceTB/SmolLM3-3B"
+    ],
+    "note": "Runtime success is required before cold baseline benchmark."
+  }
 }
-
