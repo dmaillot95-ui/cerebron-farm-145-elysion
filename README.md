@@ -1,78 +1,23 @@
-# F145 ELYSION — AGORA-ELYSION-001
+# ELYSION — native model project for CÉRÉBRON
 
-Status: ACTIVE_COORDINATION
-Mode: CEREBRON
-Target: build the first native ELYSION model through measured training, not by declaration.
+ELYSION is a governed model-development project. It is **not** an active F145 farm and it is not yet a trained model.
 
-## Participants expected
+- Project ID: `MODEL-ELYSION-001`
+- Legacy repository name: `cerebron-farm-145-elysion`
+- Farm registry effect: `0`
+- Current decision: `HOLD_ARCHITECTURE_ONLY`
+- Training status: `NON_EXECUTED`
+- Weight change: `false`
 
-- ASTRA-A — model architecture
-- ASTRA-B — training engineering
-- ASTRA-C — memory/RAG
-- ASTRA-D — benchmark
-- ASTRA-E — Red Team
-- ASTRA-F — synthesis/release
-- CEREBRON
-- SIGMA
-- SAPHEA
-- SPIRALION
-- ETHERION
-- HYPERION
-- ASTRION
-- METRION
-- AFAH
-- AELYS
-- ELYRA
-- SAPHEA MICRO
-- HF-A01..HF-A20 only when selected by measured need
-- External ChatGPT participants through auditable capsules
+The authoritative CÉRÉBRON farm registry remains capped at F001–F144. Promotion requires a pinned base model, license approval, isolated M6 benchmark, reproducible dataset lineage, available compute, rollback evidence, and post-training transfer/regression results.
 
-## Rules
+## First cycle
 
-REALITY > COHERENCE
-EVIDENCE > CONFIDENCE
-CLAIM <= EVIDENCE
-VERIFY BEFORE COMMIT
-MEMORY != LEARNING
-PROMPT != TRAINING
-WORKFLOW SUCCESS != SCIENTIFIC VALIDATION
-SAME_LINEAGE != INDEPENDENT_EVIDENCE
-M6 NEVER IN TRAIN
-WEIGHTS_CHANGED REQUIRED FOR NEURAL LEARNING
-ABLATION BEFORE ADDITION
-TRANSFER BEFORE GENERALITY
+`AGORA-ELYSION-001` collected six real ASTRA planning functions: architecture, training, memory, benchmark, red team, and release. No Hugging Face worker, farm, model inference, or training job was executed in that planning cycle.
 
-## Memory topology
+The initial candidate family is Qwen3-4B versus SmolLM3-3B. Selection must be made by the cold baseline rather than reputation. LoRA/QLoRA is the preferred first reversible experiment only after all release gates pass.
 
-GitHub stores control-plane material only:
-code, configuration, hashes, provenance, receipts, checkpoints, opaque pointers.
+## Evidence boundary
 
-Durable private common memory:
-cerebron-omega/cerebron-private-memory
+CÉRÉBRON already contains evidence of scoped ELYRA synthetic-policy imitation learning. That result does not prove ELYSION language-model training, RL, AGI, or general intelligence.
 
-Training/model workspace currently available:
-cerebron-omega/cerebron-sigma-memory
-
-ELYSION training records must use:
-M0 ephemeral
-M1 trace
-M2 replay
-M3 warm
-M4 GOLD
-M5 model/adapter
-M6 cold benchmark sealed and excluded from training
-M7 evidence
-
-## First decision gates
-
-1. Verify all real participants and their execution receipts.
-2. Freeze an ELYSION taskset and M6 holdout before training.
-3. Benchmark eligible base models at immutable revisions.
-4. Select the base by measured capability x trainability x memory x latency x license.
-5. Build ELYSION-GOLD-V1 only from audited/reproduced traces.
-6. Start with reversible LoRA/QLoRA/SFT if justified.
-7. Compare base alone vs CEREBRON+base vs SIGMA vs ELYSION.
-8. Red Team and transfer-test before promotion.
-9. Preserve champion and rollback path.
-
-No AGI/ASI/superintelligence claim is allowed from architecture or workflow success alone.
