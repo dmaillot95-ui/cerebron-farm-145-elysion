@@ -1,0 +1,67 @@
+{
+  "schema": "AGORA_EXTERNAL_CONTRIBUTION_V1",
+  "agora_id": "AGORA-ELYSION-001",
+  "participant_id": "CHATGPT-GPT-5.6-SOL",
+  "provider": "OpenAI",
+  "model": "GPT-5.6 Sol",
+  "session_id": "CURRENT_CHAT_SESSION_ID_NOT_EXPOSED_TO_TOOLING",
+  "status": "UNDER_TEST_EXTERNAL",
+  "role": "architecture_audit_training_strategy_memory_and_benchmark_advisor",
+  "independence_claim": false,
+  "timestamp": "2026-09-23",
+  "contribution": {
+    "architecture": [
+      "Treat ELYSION as a trainable native model, not merely a role wrapper.",
+      "Keep CEREBRON as orchestration/control plane and SIGMA as meta-manager/teacher integrator.",
+      "Use 6 ASTRA functions as complementary workstreams; require real artifacts before counting them as executed.",
+      "Use HF-A01..HF-A20 adaptively; do not activate all 20 by default."
+    ],
+    "base_model_shortlist": [
+      "Qwen/Qwen3-4B-Base",
+      "HuggingFaceTB/SmolLM3-3B-Base",
+      "mistralai/Ministral-3-3B-Base-2512"
+    ],
+    "base_selection_rule": "Cold benchmark immutable revisions before binding. Do not choose by reputation.",
+    "memory": [
+      "Use cerebron-omega/cerebron-private-memory for durable common validated memory.",
+      "Use cerebron-omega/cerebron-sigma-memory for current curated training/model workspace until an ELYSION-specific store is justified.",
+      "Keep GitHub to code/config/SHA/provenance/receipts/pointers.",
+      "Never place M6 examples into training or retrieval that can contaminate evaluation."
+    ],
+    "training": [
+      "Freeze M6 first.",
+      "Build ELYSION-GOLD-V1 from reproduced M4 records.",
+      "Establish base-model baseline before any weight change.",
+      "Prefer reversible adapter training before full-weight training.",
+      "Require weights/adapters SHA, dataset SHA, config, seed, before/after M6, transfer and regression.",
+      "Promote only reproduced gain; otherwise rollback."
+    ],
+    "first_ablation": [
+      "best_base_model_alone",
+      "best_base_plus_CEREBRON",
+      "SIGMA",
+      "ELYSION_pretrain_scaffold",
+      "ELYSION_trained",
+      "ELYSION_trained_plus_minimal_coalition",
+      "ELYSION_trained_plus_selected_HF_agents_and_farms"
+    ],
+    "failure_watch": [
+      "same Qwen lineage mistaken for independent consensus",
+      "M6 leakage",
+      "raw AGORA output promoted directly to GOLD",
+      "heterogeneous weight averaging",
+      "training without immutable dataset/revision hashes",
+      "20-agent fanout producing duplicated lineage rather than information gain",
+      "memory growth on GitHub instead of HF private store"
+    ]
+  },
+  "requested_from_astra": [
+    "ASTRA-A: architecture proposal + candidate base + parameter budget",
+    "ASTRA-B: training recipe + resource feasibility + rollback",
+    "ASTRA-C: memory namespace/dataflow + dedup/contamination rules",
+    "ASTRA-D: frozen baseline/M6 benchmark design",
+    "ASTRA-E: adversarial failure analysis",
+    "ASTRA-F: synthesis preserving disagreements and evidence limits"
+  ],
+  "promotion": "NOT_GOLD_AUDIT_REQUIRED"
+}
