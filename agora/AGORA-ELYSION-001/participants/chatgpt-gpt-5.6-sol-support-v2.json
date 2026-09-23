@@ -1,0 +1,21 @@
+{
+  "schema": "AGORA_ELYSION_SUPPORT_GPT56_V2",
+  "participant": "CHATGPT-GPT-5.6-SOL",
+  "state": "UNDER_TEST_EXTERNAL",
+  "purpose": "Reduce coordination errors while ASTRA agents build ELYSION.",
+  "priority_advice": [
+    "Do not train until base-model comparison and M6 freeze are complete.",
+    "Make every ASTRA result machine-readable and provenance-bearing.",
+    "Use the same frozen baseline taskset across candidate bases.",
+    "Keep raw forum output quarantined; only reproduced/audited traces enter GOLD.",
+    "Use adapters first so every experiment is reversible.",
+    "Do not allocate all 20 HF slots unless ablation predicts useful information gain.",
+    "Record negative results; they are training-selection evidence, not waste."
+  ],
+  "artifacts_added": [
+    "architecture/ELYSION_BASE_MODEL_DECISION_MATRIX_V1.json",
+    "training/ELYSION_TRAINING_READINESS_GATES_V1.json",
+    "schemas/astra-elysion-result.schema.json",
+    "validate_astra_intake.py"
+  ]
+}
