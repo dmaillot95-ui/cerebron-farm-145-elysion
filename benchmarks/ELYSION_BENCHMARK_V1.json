@@ -1,0 +1,70 @@
+{
+  "schema": "ELYSION_BENCHMARK_V1",
+  "status": "DESIGN_FROZEN_BEFORE_TRAINING",
+  "suites": [
+    {
+      "domain": "math_proof",
+      "count": 10
+    },
+    {
+      "domain": "code_debugging",
+      "count": 10
+    },
+    {
+      "domain": "science_reasoning",
+      "count": 10
+    },
+    {
+      "domain": "engineering",
+      "count": 10
+    },
+    {
+      "domain": "research_grounding",
+      "count": 10
+    },
+    {
+      "domain": "planning",
+      "count": 10
+    },
+    {
+      "domain": "tool_selection",
+      "count": 10
+    },
+    {
+      "domain": "memory_retrieval",
+      "count": 10
+    },
+    {
+      "domain": "error_detection",
+      "count": 10
+    },
+    {
+      "domain": "invention_transfer",
+      "count": 10
+    }
+  ],
+  "total": 100,
+  "compare": [
+    "BASE_MODEL_ALONE",
+    "BASE_PLUS_CEREBRON",
+    "SIGMA",
+    "ELYSION_PRETRAIN_SCAFFOLD",
+    "ELYSION_TRAINED",
+    "ELYSION_PLUS_MINIMAL_COALITION"
+  ],
+  "metrics": [
+    "accuracy",
+    "critical_error_rate",
+    "calibration",
+    "transfer",
+    "regression",
+    "latency",
+    "memory_peak",
+    "tool_success",
+    "cost_class",
+    "provenance_completeness"
+  ],
+  "freeze_rule": "TASKS_AND_ANSWER_KEYS_HASHED_BEFORE_FIRST_WEIGHT_CHANGE",
+  "pass_rule": "PROMOTION_REQUIRES_MEASURED_GAIN_WITHOUT_UNACCEPTABLE_REGRESSION",
+  "m6_rule": "M6_NEVER_IN_TRAIN"
+}
