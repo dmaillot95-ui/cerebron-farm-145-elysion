@@ -1,0 +1,21 @@
+name: ELYSION ASTRA Intake Guard
+on:
+  push:
+    paths:
+      - 'agora/AGORA-ELYSION-001/astra/**'
+      - 'validate_astra_intake.py'
+      - 'schemas/astra-elysion-result.schema.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate ASTRA intake
+        run: python validate_astra_intake.py
