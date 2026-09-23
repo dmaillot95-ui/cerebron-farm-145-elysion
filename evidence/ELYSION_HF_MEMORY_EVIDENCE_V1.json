@@ -1,0 +1,22 @@
+{
+  "schema": "ELYSION_HF_MEMORY_EVIDENCE_V1",
+  "status": "PASS",
+  "route": "CEREBRON_CONTROL_PLANE_TO_HF_PRIVATE",
+  "project_id": "MODEL-ELYSION-001",
+  "hosting_farm_id": 145,
+  "repo": "cerebron-omega/cerebron-private-memory",
+  "run_id": 35917403993,
+  "job_id": 107372423244,
+  "artifact_id": 10775791247,
+  "artifact_name": "elysion-hf-memory-canary",
+  "artifact_digest": "sha256:4836f3f60393fbd2a37c8f597e6000daf509bec43b1a3518b96561b817a9326f",
+  "checks": [
+    "AUTH=PASS",
+    "PRIVATE_REPO=PASS",
+    "WRITE=PASS",
+    "READ=PASS",
+    "SHA256=PASS"
+  ],
+  "claim_scope": "Live ELYSION memory route verified. This is not neural training or model-quality evidence.",
+  "m6_status": "NOT_YET_FROZEN"
+}
