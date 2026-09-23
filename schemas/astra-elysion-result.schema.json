@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASTRA ELYSION contribution",
+  "type": "object",
+  "required": [
+    "agent_id",
+    "role",
+    "status",
+    "task_id",
+    "model_id",
+    "model_revision",
+    "execution_id",
+    "result_sha256",
+    "provenance",
+    "summary",
+    "evidence",
+    "open_blocks",
+    "next_action"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string",
+      "enum": [
+        "ASTRA-A",
+        "ASTRA-B",
+        "ASTRA-C",
+        "ASTRA-D",
+        "ASTRA-E",
+        "ASTRA-F"
+      ]
+    },
+    "role": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "EXECUTED",
+        "PARTIAL",
+        "BLOCKED",
+        "NON_EXECUTED"
+      ]
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "model_id": {
+      "type": "string"
+    },
+    "model_revision": {
+      "type": "string"
+    },
+    "execution_id": {
+      "type": "string"
+    },
+    "result_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array"
+    },
+    "open_blocks": {
+      "type": "array"
+    },
+    "next_action": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
