@@ -1,0 +1,54 @@
+{
+  "schema": "ELYSION_LICENSE_RUNTIME_VERIFICATION_V1",
+  "date": "2026-09-23",
+  "status": "LICENSE_PASS_RUNTIME_CANARY_REQUIRED",
+  "sources": "OFFICIAL_HUGGING_FACE_MODEL_REPOSITORIES_AND_GITHUB_RUNNER_DOCS",
+  "candidates": [
+    {
+      "model_id": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "license": "Apache-2.0",
+      "revision_verified": true,
+      "repository_size_gb": 8.06,
+      "source": "https://huggingface.co/Qwen/Qwen3-4B/tree/1cfa9a7208912126459214e8b04321603b3df60c"
+    },
+    {
+      "model_id": "Qwen/Qwen3-4B-Base",
+      "revision": "906bfd4b4dc7f14ee4320094d8b41684abff8539",
+      "license": "Apache-2.0",
+      "revision_verified": true,
+      "repository_size_gb": 8.06,
+      "source": "https://huggingface.co/Qwen/Qwen3-4B-Base/tree/906bfd4b4dc7f14ee4320094d8b41684abff8539"
+    },
+    {
+      "model_id": "HuggingFaceTB/SmolLM3-3B",
+      "revision": "a07cc9a04f16550a088caea529712d1d335b0ac1",
+      "license": "Apache-2.0",
+      "revision_verified": true,
+      "repository_size_gb": 6.17,
+      "source": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B/tree/main"
+    },
+    {
+      "model_id": "HuggingFaceTB/SmolLM3-3B-Base",
+      "revision": "d78a42f79198603e614095753484a04c10c2b940",
+      "license": "Apache-2.0",
+      "revision_verified": true,
+      "repository_size_gb": 41.6,
+      "note": "Repository total includes ONNX artifacts; safetensor model shards are ~6.15 GB.",
+      "source": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B-Base/tree/d78a42f79198603e614095753484a04c10c2b940"
+    }
+  ],
+  "runner": {
+    "provider": "GitHub-hosted public ubuntu-latest",
+    "cpu": 4,
+    "ram_gb": 16,
+    "ssd_gb": 14,
+    "cost_policy": "STANDARD_PUBLIC_REPOSITORY_RUNNER_FREE",
+    "source": "https://docs.github.com/en/actions/reference/runners/github-hosted-runners"
+  },
+  "feasibility": {
+    "simultaneous_full_precision_models": "DENY",
+    "sequential_single_model_canary": "PLAUSIBLE_REQUIRES_REAL_RUN",
+    "rule": "Do not promote runtime feasibility until exact-revision model load and deterministic generation complete."
+  }
+}
