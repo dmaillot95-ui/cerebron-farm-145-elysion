@@ -1,0 +1,35 @@
+{
+  "schema": "ELYSION_M6_EVIDENCE_V1",
+  "status": "SEALED_PRIVATE_VERIFIED",
+  "classification": "M6_COLD_BENCHMARK",
+  "deny_training": true,
+  "repo": "cerebron-omega/cerebron-private-memory",
+  "object_path": "elysion/M6/ELYSION-M6-V1.json",
+  "dataset_sha256": "bc2324c1afffe780c3deb3cc25e70f9838f86253bb4ea27f88fec0cb209b59f6",
+  "private_seed_sha256": "602245912b32825105fa254d9edcc07571f4d43b8cf3259aded63bd3709861e2",
+  "task_count": 100,
+  "domain_counts": {
+    "math_proof": 10,
+    "code_debugging": 10,
+    "science_reasoning": 10,
+    "engineering": 10,
+    "research_grounding": 10,
+    "planning": 10,
+    "tool_selection": 10,
+    "memory_retrieval": 10,
+    "error_detection": 10,
+    "invention_transfer": 10
+  },
+  "run_id": 35917712253,
+  "artifact_id": 10776000975,
+  "artifact_digest": "sha256:39ba00c6568d8876733715ee36900f132dd615435289c88aef8cef4626251ded",
+  "checks": [
+    "GENERATE=PASS",
+    "PRIVATE_WRITE=PASS",
+    "PRIVATE_READ=PASS",
+    "SHA256=PASS",
+    "COUNT_100=PASS"
+  ],
+  "public_exposure": "METADATA_ONLY",
+  "prompts_answers_seed": "PRIVATE"
+}
