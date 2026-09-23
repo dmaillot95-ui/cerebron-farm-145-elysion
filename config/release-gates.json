@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "decision":"NO_GO_TRAINING",
+  "gates":[
+    {"id":"G1","name":"farm_governance","status":"PASS","evidence":"MODEL_PROJECT with farm_count_effect=0"},
+    {"id":"G2","name":"base_model_revision_and_license","status":"BLOCKED"},
+    {"id":"G3","name":"memory_live_access_and_m6_isolation","status":"BLOCKED"},
+    {"id":"G4","name":"gold_dataset_lineage_and_dedup","status":"BLOCKED"},
+    {"id":"G5","name":"cold_baseline_reproduced","status":"BLOCKED"},
+    {"id":"G6","name":"training_compute_available","status":"BLOCKED"},
+    {"id":"G7","name":"rollback_and_artifact_store","status":"BLOCKED"},
+    {"id":"G8","name":"red_team_approval","status":"BLOCKED"}
+  ],
+  "promotion_requires":["weights_changed","adapter_sha256","baseline_m6","posttrain_m6","transfer_test","regression_test","reproduction","afah_audit"]
+}
+
