@@ -1,0 +1,73 @@
+{
+  "schema": "ELYSION_ARCHITECTURE_V1",
+  "status": "PROPOSED_UNDER_TEST",
+  "role": "FIRST_NATIVE_TRAINABLE_CEREBRON_MODEL",
+  "control_plane": "CEREBRON",
+  "meta_manager": "SIGMA",
+  "target_repo": "dmaillot95-ui/cerebron-farm-145-elysion",
+  "layers": [
+    {
+      "id": "L0",
+      "name": "BASE_MODEL",
+      "rule": "SELECT_BY_COLD_BENCHMARK_IMMUTABLE_REVISION"
+    },
+    {
+      "id": "L1",
+      "name": "ELYSION_CORE",
+      "rule": "TRAINABLE_SHARED_REASONING_CORE"
+    },
+    {
+      "id": "L2",
+      "name": "ADAPTERS",
+      "rule": "SPECIALIZE_WITH_REVERSIBLE_ADAPTERS_FIRST"
+    },
+    {
+      "id": "L3",
+      "name": "MEMORY_INTERFACE",
+      "rule": "HF_PRIVATE_POINTER_BASED_MEMORY"
+    },
+    {
+      "id": "L4",
+      "name": "TOOLS_AND_FARMS",
+      "rule": "REAL_EXECUTION_RECEIPTS_ONLY"
+    },
+    {
+      "id": "L5",
+      "name": "CEREBRON_ORCHESTRATION",
+      "rule": "MINIMAL_USEFUL_COALITION"
+    },
+    {
+      "id": "L6",
+      "name": "AFAH_RED_TEAM",
+      "rule": "PROMOTION_REQUIRES_AUDIT"
+    }
+  ],
+  "candidate_bases": [
+    {
+      "model": "Qwen/Qwen3-4B-Base",
+      "status": "CANDIDATE_PINNED_IN_MASTER"
+    },
+    {
+      "model": "HuggingFaceTB/SmolLM3-3B-Base",
+      "status": "CANDIDATE_PINNED_IN_MASTER"
+    },
+    {
+      "model": "mistralai/Ministral-3-3B-Base-2512",
+      "status": "CANDIDATE_PINNED_IN_MASTER"
+    }
+  ],
+  "decision_rule": "NO_MODEL_BINDING_BEFORE_COLD_BASELINE",
+  "training_sequence": [
+    "FREEZE_M6",
+    "BUILD_GOLD_V1",
+    "BASELINE_BASE_MODELS",
+    "SELECT_CHAMPION_BASE",
+    "TRAIN_REVERSIBLE_ADAPTER",
+    "POSTTRAIN_M6",
+    "TRANSFER",
+    "REGRESSION",
+    "RED_TEAM",
+    "PROMOTE_OR_ROLLBACK"
+  ],
+  "claim_ceiling": "ARCHITECTURE_PROPOSAL_ONLY"
+}
