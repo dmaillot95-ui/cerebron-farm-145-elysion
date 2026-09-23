@@ -1,0 +1,38 @@
+{
+  "schema": "ELYSION_MEMORY_CONTRACT_V1",
+  "status": "PROPOSED_UNDER_TEST",
+  "durable_common_repo": "cerebron-omega/cerebron-private-memory",
+  "training_workspace_repo": "cerebron-omega/cerebron-sigma-memory",
+  "github_role": "CODE_CONFIG_HASHES_RECEIPTS_POINTERS_ONLY",
+  "classes": {
+    "M0": "EPHEMERAL",
+    "M1": "TRACE",
+    "M2": "REPLAY",
+    "M3": "WARM",
+    "M4": "GOLD",
+    "M5": "MODEL_ADAPTER",
+    "M6": "COLD_BENCHMARK_SEALED",
+    "M7": "EVIDENCE"
+  },
+  "write_gate": [
+    "SHA256",
+    "PROVENANCE",
+    "DEDUP",
+    "MEMORY_CLASS",
+    "AUDIT_STATUS",
+    "NO_SECRET"
+  ],
+  "training_allowed": [
+    "M4_GOLD",
+    "M2_REPLAY_IF_PROMOTED",
+    "M7_EVIDENCE_METADATA"
+  ],
+  "training_forbidden": [
+    "M6_COLD_BENCHMARK",
+    "RAW_AGORA",
+    "UNVERIFIED_EXTERNAL",
+    "SECRETS"
+  ],
+  "contamination_rule": "M6_CONTENT_OR_PARAPHRASE_MUST_NOT_BE_WRITTEN_TO_TRAINING_MEMORY",
+  "recall_rule": "RETRIEVAL_FOR_BENCHMARK_MUST_EXCLUDE_M6_NEAR_DUPLICATES_AND_ANSWER_KEYS"
+}
