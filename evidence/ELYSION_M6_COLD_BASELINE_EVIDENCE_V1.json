@@ -1,0 +1,45 @@
+{
+  "schema": "ELYSION_M6_COLD_BASELINE_EVIDENCE_V1",
+  "status": "COMPLETE_NOT_YET_REPRODUCED",
+  "run_id": 35918041093,
+  "m6_sha256": "bc2324c1afffe780c3deb3cc25e70f9838f86253bb4ea27f88fec0cb209b59f6",
+  "protocol": {
+    "thinking": false,
+    "rag": false,
+    "tools": false,
+    "agents": false,
+    "cerebron": false,
+    "weights_changed": false
+  },
+  "models": [
+    {
+      "model_id": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "correct": 51,
+      "total": 100,
+      "accuracy": 0.51,
+      "elapsed_s": 1200.026,
+      "max_rss_kb": 9334956,
+      "private_result_sha256": "6b5b8b1dfa24e93dc12f594449755c8fe9ab054450c6ac48f7718b2279cc0ae1",
+      "artifact_id": 10776453114,
+      "artifact_digest": "sha256:22db62409d6862bab73559c89e16f8647cae4d12a41b8d31e98857851d8e0e2c"
+    },
+    {
+      "model_id": "HuggingFaceTB/SmolLM3-3B",
+      "revision": "a07cc9a04f16550a088caea529712d1d335b0ac1",
+      "correct": 62,
+      "total": 100,
+      "accuracy": 0.62,
+      "elapsed_s": 2834.231,
+      "max_rss_kb": 6679112,
+      "private_result_sha256": "9026e3995150ca07723d0afc1b229e7f0b9e209e4a3033e32b6c81cb715549f1",
+      "artifact_id": 10777419362,
+      "artifact_digest": "sha256:0fc0cc85974e14eafb3247680b17d11b6145371e9a6d3b419da789953c27f37b"
+    }
+  ],
+  "comparison_artifact_id": 10778420624,
+  "comparison_artifact_digest": "sha256:5c865635d50f4ea901fdb3d3ef83d0d09f177014e651a0608ebb48aa11b705c0",
+  "interpretation": "SmolLM3-3B has higher score on this sealed M6 instance, while domain strengths are complementary. No final base selection until reproduction, Red Team and resource ablation.",
+  "selection_decision": "HOLD",
+  "training_authorization": false
+}
