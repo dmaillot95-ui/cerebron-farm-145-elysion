@@ -18,7 +18,7 @@
       "id": "G3",
       "name": "memory_live_access_and_m6_isolation",
       "status": "PARTIAL",
-      "evidence": "Live private memory PASS; M6 private seal/readback/SHA/count PASS; training-source isolation policy exists but E2E exclusion is not yet proven.",
+      "evidence": "HF private memory PASS; M6 sealed/private PASS; source isolation unit/integration gate PASS; full TRAIN assembler E2E exclusion still unproven.",
       "subchecks": {
         "private_memory_live_access": "PASS",
         "private_memory_run_id": 35917403993,
@@ -26,11 +26,13 @@
         "private_memory_artifact_id": 10775791247,
         "private_memory_artifact_digest": "sha256:4836f3f60393fbd2a37c8f597e6000daf509bec43b1a3518b96561b817a9326f",
         "m6_frozen_hashed": "PASS",
-        "m6_train_retrieval_isolation": "POLICY_DEFINED_NOT_E2E_PROVED",
+        "m6_train_retrieval_isolation": "SOURCE_GATE_TEST_PASS_FULL_TRAIN_ASSEMBLER_E2E_PENDING",
         "m6_dataset_sha256": "bc2324c1afffe780c3deb3cc25e70f9838f86253bb4ea27f88fec0cb209b59f6",
         "m6_run_id": 35917712253,
         "m6_artifact_id": 10776000975,
-        "m6_artifact_digest": "sha256:39ba00c6568d8876733715ee36900f132dd615435289c88aef8cef4626251ded"
+        "m6_artifact_digest": "sha256:39ba00c6568d8876733715ee36900f132dd615435289c88aef8cef4626251ded",
+        "source_gate_run_id": 35918261298,
+        "source_gate_head_sha": "93b47ff1a530c154bbae31df551ac932164a450d"
       }
     },
     {
@@ -41,7 +43,24 @@
     {
       "id": "G5",
       "name": "cold_baseline_reproduced",
-      "status": "BLOCKED"
+      "status": "PARTIAL",
+      "evidence": "Cold M6 baseline completed for Qwen3-4B and SmolLM3-3B on identical sealed M6; independent reproduction pending.",
+      "subchecks": {
+        "baseline_run_id": 35918041093,
+        "m6_sha256": "bc2324c1afffe780c3deb3cc25e70f9838f86253bb4ea27f88fec0cb209b59f6",
+        "qwen3_4b": {
+          "correct": 51,
+          "total": 100,
+          "accuracy": 0.51
+        },
+        "smollm3_3b": {
+          "correct": 62,
+          "total": 100,
+          "accuracy": 0.62
+        },
+        "reproduction": "PENDING",
+        "final_selection": "DENY_PENDING_REDTEAM_RESOURCE_ABLATION_REPRODUCTION"
+      }
     },
     {
       "id": "G6",
